@@ -28,7 +28,7 @@ public class OneOfEachStats1 {
 			while (IsABoy == false || IsAGirl == false) {
 				child_count +=1;
 				Allchildren +=1;
-				if(Birth <= 0.4){
+				if(Birth <= 0.5){
 					IsAGirl = true;
 				}
 				else{

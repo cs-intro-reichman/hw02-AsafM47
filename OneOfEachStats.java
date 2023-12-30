@@ -45,7 +45,7 @@ public class OneOfEachStats {
 			while (IsABoy == false || IsAGirl == false) {
 				child_count +=1;
 				Allchildren +=1;
-				if(Birth <= 0.4){
+				if(Birth <= 0.5){
 					IsAGirl = true;
 				}
 				else{
@@ -66,7 +66,7 @@ public class OneOfEachStats {
 			sim_count +=1;
 		}
 		Avarage = (double)(Allchildren/Rep);
-		System.out.println("Avarge: " + Avarage + " children to get at least one of each gender.");
+		System.out.println("Average: " + Avarage + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + fam2_count);
 		System.out.println("Number of families with 3 children: " + fam3_count);
 		System.out.println("Number of families with 4 or more children: " + fam4_count);

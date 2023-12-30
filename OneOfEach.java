@@ -11,7 +11,7 @@ public class OneOfEach {
 		int child_count = 0;
 		while (IsABoy == false || IsAGirl == false) {
 			child_count +=1;
-			if(Birth <= 0.4){
+			if(Birth <= 0.5){
 				System.out.print("g ");
 				IsAGirl = true;
 			}
