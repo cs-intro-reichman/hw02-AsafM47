@@ -28,7 +28,7 @@ public class OneOfEachStats {
 
 		boolean IsABoy = false; //This variable will become true when a boy is born.
 		boolean IsAGirl = false; //This variable will become true when a girl is born.
-		double Birth = Math.random(); //This variable holds the results of the birth.
+		double Birth =  generator.nextDouble(); //This variable holds the results of the birth.
 		int child_count = 0; //This variable counts how many children were born inside the current simulation. 
 		double Allchildren = 0; //This variable counts how many children were totally born. 
 		double Avarage = 0.0;
