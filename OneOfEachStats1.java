@@ -7,15 +7,17 @@
 public class OneOfEachStats1 {
 	public static void main (String[] args) {
 		int Rep = Integer.parseInt(args[0]);
-		int sim_count = 0; 
+		int sim_count = 0; //This variable will count how many times we did the test  
 
-		boolean IsABoy = false;
-		boolean IsAGirl = false;
-		double Birth = Math.random();
-		int child_count = 0;
-		double Allchildren = 0;
+		boolean IsABoy = false; //This variable will become true when a boy is born.
+		boolean IsAGirl = false; //This variable will become true when a girl is born.
+		double Birth = Math.random(); //This variable holds the results of the birth.
+		int child_count = 0; //This variable counts how many children were born inside the current simulation. 
+		double Allchildren = 0; //This variable counts how many children were totally born. 
 		double Avarage = 0.0;
 
+
+		//variables that count the amount of families with 2, 3 ,4/more childrens 
 		int fam2_count = 0;
 		int fam3_count = 0;
 		int fam4_count = 0;
@@ -23,12 +25,12 @@ public class OneOfEachStats1 {
 		while(sim_count < Rep)
 		{
 			IsABoy = false;
-			IsAGirl = false;
+			IsAGirl = false; // restes the 3 Variabeles in the start of each simulation
 			child_count = 0;
 			while (IsABoy == false || IsAGirl == false) {
 				child_count +=1;
 				Allchildren +=1;
-				if(Birth <= 0.5){
+				if(Birth <= 0.5){ //checks if a boy or a girl was born.
 					IsAGirl = true;
 				}
 				else{
@@ -36,6 +38,7 @@ public class OneOfEachStats1 {
 				}
 				Birth = Math.random();
 			}
+			//checks how many children were in the family and updates the counters.
 			if (child_count == 2) {
 				fam2_count += 1;
 			}
@@ -48,7 +51,7 @@ public class OneOfEachStats1 {
 
 			sim_count +=1;
 		}
-		Avarage = (double)(Allchildren/Rep);
+		Avarage = (double)(Allchildren/Rep); //Average of how many children were born untill each family had a b oy and a girl. 
 		System.out.println("Avarge: " + Avarage + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + fam2_count);
 		System.out.println("Number of families with 3 children: " + fam3_count);

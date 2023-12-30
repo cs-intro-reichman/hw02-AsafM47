@@ -3,10 +3,10 @@
  */
 public class DamkaBoard {
 	public static void main(String[] args) {
-		int size = Integer.parseInt(args[0]);
+		int size = Integer.parseInt(args[0]); //gets the size of the board from the user
 		for(int i = 0; i < size; i++){
 			for(int j = 0; j<size; j++){
-				if (i%2 == 0) {
+				if (i%2 == 0) { //allign the printing with the demand in the exercise 
 					System.out.print("* ");
 				}
 				else{
